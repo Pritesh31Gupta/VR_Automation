@@ -10,13 +10,14 @@ const logger = require('./utils/logger');
 const app = express();
 
 // Middleware
-app.use(cors({
+ app.use(cors({
   origin: [
     'http://localhost:3000',
-    'https://your-netlify-app.netlify.app'  // Add your Netlify URL
+    'https://694a96038463bd98c8eab424--tranquil-sawine-d6debd.netlify.app/'  // Add your Netlify URL
   ],
   credentials: true
-}));app.use(express.json());
+}));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Connect to database
