@@ -10,7 +10,10 @@ const logger = require('./utils/logger');
 const app = express();
 
 // Middleware
-app.use(cors());
+  app.use(cors({
+  origin: 'https://enchanting-sopapillas-73dedd.netlify.app/',
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
